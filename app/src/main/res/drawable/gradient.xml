@@ -6,6 +6,11 @@
         android:angle="0"
         android:startColor="#96739EFF"
         android:endColor="#94FFC1DA"/>
+    <corners
+        android:bottomLeftRadius="20dp"
+        android:bottomRightRadius="20dp"
+        android:topLeftRadius="20dp"
+        android:topRightRadius="20dp" />
 
     <!--    android:angle="0"-->
     <!-- angle 0 으로 맞추면 가로 90 은 세로-->
