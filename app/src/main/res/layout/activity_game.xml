@@ -4,23 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-    <variable
-        name="Activity"
-        type="com.example.cumb_android.MainActivity" />
-        
+        <variable
+            name="Activity"
+            type="com.example.cumb_android.GameActivity" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
-
+        tools:context=".GameActivity">
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/main_toolbar"
+            android:id="@+id/game_toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="취업마블"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/game_btn1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:textAlignment="center"
@@ -28,38 +26,41 @@
 
 
         <ImageView
-            android:id="@+id/main_final"
+            android:id="@+id/game_final"
             android:layout_width="300dp"
             android:layout_height="300dp"
             android:layout_marginTop="122dp"
-            app:layout_constraintTop_toBottomOf="@+id/main_toolbar"
+            app:layout_constraintTop_toBottomOf="@+id/game_toolbar"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:background="@drawable/finalboard"/>
 
-        <TextView
-            android:id="@+id/main_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="취업마블이 준비되었어요.\n 지금 시작해볼까요?"
-            android:textAlignment="center"
-            android:fontFamily="@font/paybooc_bold"
-            app:layout_constraintTop_toBottomOf="@+id/main_final"
-            android:layout_marginTop="67dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:textSize="15dp"/>
+
 
         <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="254dp"
+            android:id="@+id/game_btn1"
+            android:layout_width="127dp"
             android:layout_height="40dp"
             android:background="@drawable/gradient"
-            android:text="게임 시작하기"
+            android:text="주사위 던지기"
+            android:layout_marginStart="60dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="140dp"
             android:fontFamily="@font/paybooc_bold"
-            app:layout_constraintTop_toBottomOf="@+id/main_text"
+            app:layout_constraintTop_toBottomOf="@+id/game_final"
+            android:textColor="@color/white"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/game_btn2"
+            android:layout_width="127dp"
+            android:layout_height="40dp"
+            android:background="@drawable/gradient"
+            android:text="건물 구입하기"
+            app:layout_constraintStart_toEndOf="@+id/game_btn1"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="140dp"
+            android:fontFamily="@font/paybooc_bold"
+            app:layout_constraintTop_toBottomOf="@+id/game_final"
             android:textColor="@color/white"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

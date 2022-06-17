@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.example.cumb_android.LinkageDialogActivity" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="331dp"
+            android:layout_height="144dp"
+            android:layout_gravity="center"
+            android:background="@drawable/background_dialog"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dialog_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/paybooc_light"
+                android:text="블루투스 요청"
+                android:textSize="13dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/dialog_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/paybooc_light"
+                android:gravity="center"
+                android:text="Board 디바이스를 연동할까요?"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_title" />
+
+            <Button
+                android:id="@+id/dialog_no_btn"
+                android:layout_width="70dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/background_dialog_no"
+                android:fontFamily="@font/paybooc_light"
+                android:text="취소"
+                android:textColor="@color/black"
+                android:textSize="13dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_content" />
+
+
+            <Button
+                android:id="@+id/dialog_ok_btn"
+                android:layout_width="70dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/gradient"
+                android:fontFamily="@font/paybooc_light"
+                android:text="확인"
+                android:textColor="@color/white"
+                android:textSize="13dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/dialog_no_btn"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_content" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</layout>

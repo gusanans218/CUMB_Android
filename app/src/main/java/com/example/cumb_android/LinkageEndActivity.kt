@@ -1,34 +1,23 @@
 package com.example.cumb_android
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.text.set
 import androidx.core.text.toSpannable
 
-class SplashActivity : AppCompatActivity() {
-
-    private val DELAY_TIME = 3000L
-
+class LinkageEndActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
+        setContentView(R.layout.activity_linkage_end)
 
-        val txtHello: TextView = findViewById(R.id.splash_title2)
-        val text = "취업마블"
+       /* val txtHello: TextView = findViewById(R.id.device_title)
+        val text = "Device Linkage"
         val purple = ContextCompat.getColor(this, R.color.start)
         val teal = ContextCompat.getColor(this, R.color.end)
         val spannable = text.toSpannable()
         spannable[0..text.length] = LinearGradientSpan(text, text, purple, teal)
-        txtHello.text = spannable
-
-        Handler().postDelayed( {
-            startActivity(Intent(this, LinkageActivity::class.java))
-            finish()
-        } , DELAY_TIME)
+        txtHello.text = spannable*/
     }
-
 }
