@@ -8,6 +8,8 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.text.set
 import androidx.core.text.toSpannable
+import androidx.databinding.DataBindingUtil
+import com.example.cumb_android.databinding.ActivityMainBinding
 
 class SplashActivity : AppCompatActivity() {
 
@@ -16,7 +18,6 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
-
         val txtHello: TextView = findViewById(R.id.splash_title2)
         val text = "취업마블"
         val purple = ContextCompat.getColor(this, R.color.start)
