@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
 import androidx.core.text.set
@@ -32,6 +33,15 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, GameActivity::class.java)
             startActivity(intent)  // 화면 전환을 시켜줌
             finish()  // main 창을 닫아줌. 닫아주지 않고싶다면 이 문장을 사용하지 않아도 됨.
+        }
+
+        binding.mainInformation.setOnClickListener {
+            val dialogView = layoutInflater.inflate(R.layout.gamerole_dialog, null)
+            val builder = AlertDialog.Builder(this)
+            val dialog = builder.create()
+            builder.setView(dialogView)
+                dialog.setCancelable(true)
+
         }
     }
 }
