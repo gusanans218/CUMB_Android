@@ -1,8 +1,14 @@
 package com.example.cumb_android
 
+import android.app.Dialog
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Gravity
+import android.view.ViewGroup
+import android.view.Window
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.Toolbar
@@ -36,11 +42,17 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.mainInformation.setOnClickListener {
-            val dialogView = layoutInflater.inflate(R.layout.gamerole_dialog, null)
-            val builder = AlertDialog.Builder(this)
-            val dialog = builder.create()
-            builder.setView(dialogView)
-                dialog.setCancelable(true)
+            val dialog = Dialog(this)
+            dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            dialog.window?.requestFeature(Window.FEATURE_NO_TITLE)
+            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+
+            dialog.setContentView(R.layout.gamerole_dialog)
+
+            dialog.window?.setLayout(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+            dialog.window?.setGravity(Gravity.CENTER)
+            dialog.show()
+            dialog.setCancelable(true)
 
         }
     }
