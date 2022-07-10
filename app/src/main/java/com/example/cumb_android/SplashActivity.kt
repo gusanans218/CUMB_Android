@@ -26,10 +26,10 @@ class SplashActivity : AppCompatActivity() {
         spannable[0..text.length] = LinearGradientSpan(text, text, purple, teal)
         txtHello.text = spannable
 
-        Handler().postDelayed( {
+        Handler().postDelayed({
             startActivity(Intent(this, LinkageActivity::class.java))
             finish()
-        } , DELAY_TIME)
+        }, DELAY_TIME)
     }
 
 }

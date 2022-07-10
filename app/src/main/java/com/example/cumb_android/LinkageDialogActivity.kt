@@ -18,7 +18,12 @@ class LinkageDialogActivity(context: Context) : Dialog(context) {
         binding.activity = this
 
         val span = SpannableString("Board 디바이스를 연동할까요?")
-        span.setSpan(ForegroundColorSpan(Color.parseColor("#F1DE33")), 1,  span.length - 5, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        span.setSpan(
+            ForegroundColorSpan(Color.parseColor("#F1DE33")),
+            1,
+            span.length - 5,
+            Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
+        )
         binding.dialogContent.text = span
 
         binding.dialogOkBtn.setOnClickListener {

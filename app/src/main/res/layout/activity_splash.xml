@@ -16,47 +16,47 @@
             android:id="@+id/splash_dice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="284dp"
             android:src="@drawable/dice"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="284dp"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/splash_title1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:fontFamily="@font/paybooc_light"
             android:text="취준생이라면 누구나"
             android:textSize="23sp"
-            android:fontFamily="@font/paybooc_light"
-            app:layout_constraintTop_toBottomOf="@+id/splash_dice"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="17dp"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/splash_dice" />
 
         <TextView
             android:id="@+id/splash_title2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:fontFamily="@font/paybooc_bold"
             android:text="취업마블"
             android:textSize="40sp"
-            android:fontFamily="@font/paybooc_bold"
-            app:layout_constraintTop_toBottomOf="@+id/splash_title1"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="11dp"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/splash_title1" />
 
         <TextView
             android:id="@+id/copyright"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="123dp"
+            android:fontFamily="@font/paybooc_light"
             android:text="Copyright © CUMB"
             android:textSize="12sp"
-            android:fontFamily="@font/paybooc_light"
-            app:layout_constraintTop_toBottomOf="@+id/splash_title2"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="123dp"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/splash_title2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

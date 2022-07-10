@@ -22,8 +22,10 @@ class LinearGradientSpan(
         if (!containingText.startsWith(textToStyle) && containingText != textToStyle) {
             leadingWidth = tp.measureText(containingText, 0, indexOfTextToStyle)
         }
-        val gradientWidth = tp.measureText(containingText, indexOfTextToStyle,
-            indexOfTextToStyle + textToStyle.length)
+        val gradientWidth = tp.measureText(
+            containingText, indexOfTextToStyle,
+            indexOfTextToStyle + textToStyle.length
+        )
 
         tp.shader = LinearGradient(
             leadingWidth,

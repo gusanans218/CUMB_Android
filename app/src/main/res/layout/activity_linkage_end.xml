@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="activity"
             type="com.example.cumb_android.LinkageEndActivity" />
@@ -18,36 +19,35 @@
             android:id="@+id/device_end_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Device Linkage"
-            android:textSize="30dp"
-            android:textColor="#87A1F8"
-            android:fontFamily="@font/paybooc_bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             android:layout_marginStart="54dp"
-            android:layout_marginTop="125dp"/>
+            android:layout_marginTop="125dp"
+            android:fontFamily="@font/paybooc_bold"
+            android:text="Device Linkage"
+            android:textColor="#87A1F8"
+            android:textSize="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/device_end_sub"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Board 디바이스가 연동되었습니다!"
-            android:fontFamily="@font/paybooc_light"
-            android:textSize="15dp"
-            app:layout_constraintTop_toBottomOf="@+id/device_end_title"
-            app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="130dp"
-            android:layout_marginTop="17dp"/>
+            android:layout_marginTop="17dp"
+            android:fontFamily="@font/paybooc_light"
+            android:text="Board 디바이스가 연동되었습니다!"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/device_end_title" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="88dp"
             android:background="@drawable/device_end_linkage"
-            app:layout_constraintTop_toBottomOf="@+id/device_end_sub"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="88dp"/>
-
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/device_end_sub" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

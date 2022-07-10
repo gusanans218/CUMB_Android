@@ -49,7 +49,10 @@ class MainActivity : AppCompatActivity() {
 
             dialog.setContentView(R.layout.gamerole_dialog)
 
-            dialog.window?.setLayout(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+            dialog.window?.setLayout(
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            )
             dialog.window?.setGravity(Gravity.CENTER)
             dialog.show()
             dialog.setCancelable(true)

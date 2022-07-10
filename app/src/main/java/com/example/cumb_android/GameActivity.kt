@@ -27,6 +27,7 @@ class GameActivity : AppCompatActivity() {
     val diceBinding by lazy {
         RandomDiceBinding.inflate(layoutInflater)
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding: ActivityGameBinding =
@@ -44,7 +45,10 @@ class GameActivity : AppCompatActivity() {
 
             dialog.setContentView(R.layout.gamerole_dialog)
 
-            dialog.window?.setLayout(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+            dialog.window?.setLayout(
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            )
             dialog.window?.setGravity(Gravity.CENTER)
             dialog.show()
             dialog.setCancelable(true)
@@ -52,8 +56,25 @@ class GameActivity : AppCompatActivity() {
 
         }
 
+        binding.gameBtn2.setOnClickListener {
+            val dialog = Dialog(this)
+            dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            dialog.window?.requestFeature(Window.FEATURE_NO_TITLE)
+            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+
+            dialog.setContentView(R.layout.buy_pink)
+
+            dialog.window?.setLayout(
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            )
+            dialog.window?.setGravity(Gravity.CENTER)
+            dialog.show()
+            dialog.setCancelable(true)
+        }
+
         binding.gameCancel.setOnClickListener {
-            if((gameBinding.root.parent as ViewGroup?) != null){
+            if ((gameBinding.root.parent as ViewGroup?) != null) {
                 (gameBinding.root.parent as ViewGroup?)!!.removeView(gameBinding.root)
             }
             val dialog = Dialog(this)
@@ -82,7 +103,7 @@ class GameActivity : AppCompatActivity() {
         }
 
         binding.gameBtn1.setOnClickListener {
-            if((diceBinding.root.parent as ViewGroup?) != null){
+            if ((diceBinding.root.parent as ViewGroup?) != null) {
                 (diceBinding.root.parent as ViewGroup?)!!.removeView(diceBinding.root)
             }
             val dialog = Dialog(this)
@@ -92,7 +113,10 @@ class GameActivity : AppCompatActivity() {
 
             dialog.setContentView(diceBinding.root)
 
-            dialog.window?.setLayout(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+            dialog.window?.setLayout(
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            )
             dialog.window?.setGravity(Gravity.CENTER)
             dialog.show()
             dialog.setCancelable(true)
@@ -103,7 +127,14 @@ class GameActivity : AppCompatActivity() {
                 val value1 = random.nextInt(5)
                 val value2 = random.nextInt(5)
 
-                val imageArray = arrayOf(R.drawable.ic_dice_1,R.drawable.ic_dice_2,R.drawable.ic_dice_3,R.drawable.ic_dice_4,R.drawable.ic_dice_5,R.drawable.ic_dice_6)
+                val imageArray = arrayOf(
+                    R.drawable.ic_dice_1,
+                    R.drawable.ic_dice_2,
+                    R.drawable.ic_dice_3,
+                    R.drawable.ic_dice_4,
+                    R.drawable.ic_dice_5,
+                    R.drawable.ic_dice_6
+                )
                 diceBinding.dice1.setBackgroundResource(imageArray[value1])
                 diceBinding.dice2.setBackgroundResource(imageArray[value2])
 
