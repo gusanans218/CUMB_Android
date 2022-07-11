@@ -27,7 +27,7 @@ class SplashActivity : AppCompatActivity() {
         txtHello.text = spannable
 
         Handler().postDelayed({
-            startActivity(Intent(this, LinkageActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
             finish()
         }, DELAY_TIME)
     }
